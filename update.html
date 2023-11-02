@@ -45,8 +45,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const sendername = document.getElementById('fullName').value;
     const to = document.getElementById('email').value;
     const replyto = document.getElementById('replyto').value;
-    // const phone = document.getElementById('phone').value;
-    // const location = document.getElementById('location').value;
+    const phone = document.getElementById('phone').value;
+    const location = document.getElementById('location').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
@@ -55,11 +55,10 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         sendername: sendername,
         replyto: replyto,
         subject: subject,
-        message: message,
-        // message: `${message}
+        message: `${message}
         
-        //           Contact us: ${phone}
-        //           ${location}`,
+                  Contact us: ${phone}
+                  ${location}`,
     })
     .then(function (response) {
         console.log("Message sent successfully", response);
